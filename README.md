@@ -10,7 +10,7 @@ var worker = function (data, callback) {
     console.log(data)
   }, 100)
 }
-var queue = new Futurus(2, worker)
+var queue = new futurus.Queue(2, worker)
 queue.on('ready', function () {
   console.log('The queue has just become ready')
 })

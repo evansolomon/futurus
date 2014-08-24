@@ -4,8 +4,14 @@
   "description": "A queue that lets you see into the future",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc src/index.ts --outDir . --module commonjs --declaration --noImplicitAny",
+    "prepublish": "npm run build",
+    "test": "npm run build && nodeunit"
   },
   "author": "Evan Solomon",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "nodeunit": "^0.9.0",
+    "typescript": "^1.0.1"
+  }
 }
