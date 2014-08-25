@@ -1,6 +1,11 @@
 {
   "name": "futurus",
   "version": "0.0.2",
+  "homepage": "https://github.com/evansolomon/futurus",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evansolomon/futurus.git"
+  },
   "description": "A queue that lets you see into the future",
   "main": "index.js",
   "scripts": {
@@ -10,10 +15,8 @@
   },
   "author": "Evan Solomon",
   "license": "MIT",
-  "dependencies": {
-    "typescript": "^1.0.1"
-  },
   "devDependencies": {
+    "typescript": "^1.0.1",
     "nodeunit": "^0.9.0"
   }
 }

@@ -2,7 +2,11 @@
 
 > About to be
 
-A queue that exposes a lot of state about how its handling your tasks.
+A queue that exposes a lot of state about how its handling your tasks. In particular, futurus can tell you whether a task you're about to add will be processed immediately or buffered.
+
+Usually you shouldn't care about this sort of thing, but this one time I did and so futurus was born.
+
+## Example
 
 ```js
 var worker = function (data, callback) {

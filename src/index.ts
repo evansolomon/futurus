@@ -27,7 +27,7 @@ export class Queue extends events.EventEmitter {
     }
   }
 
-  isReady() : boolean{
+  isReady() : boolean {
     return (this.running() + this.length()) < this.concurrency
   }
 
@@ -51,7 +51,7 @@ export class Queue extends events.EventEmitter {
     // Make sure jobs do not block due to sync workers/errors
     setImmediate(() => {
       try {
-        this.worker(job.data, (err) => {
+        this.worker(job.data, (err?:Error) => {
           this.nextJob(job, err)
         })
       } catch (e) {
@@ -86,7 +86,7 @@ export interface Errback {
   (err?:Error): void
 }
 
-export class Job {
+class Job {
   public data:any
   public callback:Errback
   static noop = function () {}
