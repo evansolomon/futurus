@@ -1,5 +1,7 @@
 # Futurus
 
+[![Build Status](https://secure.travis-ci.org/evansolomon/futurus.svg?branch=master)](http://travis-ci.org/evansolomon/futurus)
+
 > About to be
 
 A queue that exposes a lot of state about how its handling your tasks. In particular, futurus can tell you whether a task you're about to add will be processed immediately or buffered.
