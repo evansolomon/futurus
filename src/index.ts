@@ -86,7 +86,7 @@ export interface Errback {
   (err?:Error): void
 }
 
-class Job {
+export class Job {
   public data:any
   public callback:Errback
   static noop = function () {}
